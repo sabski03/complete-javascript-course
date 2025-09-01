@@ -281,13 +281,173 @@
 
 
 
-// ----- Type Conversion & Coercion -----
+// // ----- Type Conversion & Coercion -----
+
+// //javascript can convert to only 3 type -> string, number, boolean
+
+// const inputYear = '1991';
+// console.log(Number(inputYear), inputYear);
+
+// console.log(Number(inputYear) + 18);
+
+// console.log(Number('Saba')); //NaN Not a Number / Invalid Number
+
+// console.log(String(23), 23);
+
+
+// console.log('I am ' + 24 + ' years old');
+// console.log('24' - '10' - 4);
+// console.log('24' / '2');
+
+// let n = '1' + 1;
+// n = n - 1;
+// console.log(n);
 
 
 
 
 
 
+
+
+
+// // ----- Truthy & Falsy Values -----
+
+// // There are 5 falsy values: 0, '', undefined, null, NaN
+
+// console.log(Boolean(0)); //false
+// console.log(Boolean(undefined)); //false
+// console.log(Boolean('Saba')); //true
+// console.log(Boolean({})); //true
+// console.log(Boolean('')); //false
+
+// const money = 0;
+// if (money) {
+//     console.log('dont spend it all');
+// } else {
+//     console.log("you should get a job");
+// }
+
+// let height;
+// if (height) {
+//     console.log("height is defined");
+// } else {
+//     console.log("height is undefined");
+// }
+
+// let height2 = 0;
+// if (height2) {
+//     console.log("height is defined");
+// } else {
+//     console.log("height is undefined");
+// }
+
+
+// let height3 = 123;
+// if (height3) {
+//     console.log("height is defined");
+// } else {
+//     console.log("height is undefined");
+// }
+
+
+
+
+
+
+
+
+
+// // ----- Equality Operators: == vs === -----
+
+// const age = 18;
+// if (age === 18) console.log('you just became an adult (strict)');
+
+// if (age == 18) console.log('you just became an adult (loose)');
+
+// const favourite = prompt("What's your favourite number?");
+
+// console.log(favourite);
+// console.log(typeof favourite);
+
+// if (favourite == Number(favourite)) {
+//     console.log(`Cool! ${favourite} is an amazing number!`);
+// } else {
+//     console.log(`im sorry but 0 is not a number`);
+// }
+
+
+// if (favourite === Number(favourite)) {
+//     console.log(`Cool! ${favourite} is an amazing number!`);
+// } else {
+//     console.log(`im sorry but 0 is not a number`);
+// }
+
+
+
+
+
+
+
+
+
+// // ----- Logical Operators -----
+
+// const hasDriversLicense = true; //A
+// const hasGoodVision = true; //B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log("You are ready to drive");
+// } else {
+//     console.log("You shouldnt drive");
+// }
+
+// const isTired = false; //C
+// console.log(hasDriversLicense || hasGoodVision || isTired);
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log("you are good to go");
+// } else {
+//     console.log("Don't you dare drive");
+// }
+
+
+
+
+
+
+
+
+
+// ----- Coding Challenge #3 -----
+//There are two gymnastics teams: Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+
+// Your tasks:
+// 1. Calculate the average score for each team, using the test data included below. The average score for Dolphins should be assigned to the scoreDolphins variable, and the average score of Koalas should be assigned to the scoreKoalas variable.
+// 2. Compare the team's average scores to determine the winner of the competition, and print to the console:
+
+// "Dolphins win the trophy" if Dolphins win, or
+// "Koalas win the trophy" if Koalas win, or
+// "Both win the trophy" if their average scores are equal.
+
+// TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+    console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins) {
+    console.log("Koalas win the trophy");
+} else {
+    console.log("Both win the trophy");
+}
 
 
 
