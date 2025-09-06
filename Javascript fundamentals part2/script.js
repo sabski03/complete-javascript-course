@@ -202,7 +202,49 @@
 
 
 
-// ----- Introduction to Arrays -----
+// // ----- Introduction to Arrays -----
+
+// const friend1 = 'Michael';
+// const friend2 = 'Steven';
+// const friend3 = 'Peter';
+
+// const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends);
+
+// const y = new Array(1997, 2001, 2004, 1991);
+// console.log(y);
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = 'Jay';
+// console.log(friends);
+
+// const firstName = 'Saba';
+// const saba = [firstName, 'Aminashvili', 2025 - 2001, 'Student', friends];
+
+// console.log(saba);
+// console.log(saba.length);
+
+// //Exercise
+
+// const calcAge = function (birthYear) {
+//     return 2025 - birthYear;
+// }
+
+// const years = [2001, 1967, 2001, 2010, 2018];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+
+// console.log(age1, age2, age3);
+
+// const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+// console.log(ages);
 
 
 
@@ -212,6 +254,42 @@
 
 
 
+// // ----- Basic Array Operations (Methods) -----
+
+// const friends = ['Michael', 'Steven', 'Peter'];
+
+// //adds element at the end
+// friends.push('Jay');
+// console.log(friends);
+
+// //adds element at the start
+// friends.unshift('Saba');
+// console.log(friends);
+
+// //removes the last element
+// friends.pop()
+// console.log(friends);
+
+// //removes the first element
+// friends.shift();
+// console.log(friends);
+
+// //this tells us which position the element is
+// //if the element doesnt exist in the array we get -1
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
+
+// //tells us if an element exists in the array (True, False)
+// friends.push(23);
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes('23')); //False!!!
+
+// if (friends.includes('Peter')) {
+//     console.log("You have a friend called Peter");
+// } else {
+//     console.log("You have no friends");
+// }
 
 
 
@@ -219,6 +297,48 @@
 
 
 
+
+
+// ----- Coding Challenge #2 -----
+
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300,
+//  and if the value is different, the tip is 20%.
+
+// Your tasks:
+// Write a function calcTip that takes any bill value as an input and returns the corresponding tip,
+// calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to).
+// Use the function type you like the most. Test the function using a bill value of 100.
+
+// And now let's use arrays! So, create an array called bills containing the test data below.
+// Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+// BONUS: Create an array totals containing the total values, so the bill + tip.
+// TEST DATA: 125, 555, and 44.
+
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * 15 / 100;
+    } else {
+        return bill * 20 / 100;
+    }
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips);
+console.log(totals);
+
+
+
+
+
+
+
+
+
+// ----- Introduction to Objects -----
 
 
 
